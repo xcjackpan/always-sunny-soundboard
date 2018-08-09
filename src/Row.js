@@ -7,6 +7,8 @@ export default class Row extends React.Component {
     super(props);
   }
 
+  //orange: E59500
+
   async componentDidMount() {
     await Font.loadAsync({
       'raspoutine-classic': require('../assets/fonts/RaspoutineClassic_TB.otf'),
@@ -55,7 +57,7 @@ const styles = StyleSheet.create({
     paddingRight: 10,
   },
   text: {
-    color: '#E59500',
+    color: '#fff',
     fontSize: 16,
     fontFamily: 'raspoutine-classic',
   },
