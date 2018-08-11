@@ -1,5 +1,33 @@
 {
   "expo": {
+  	"name": "always-sunny-soundboard",
     "sdkVersion": "27.0.0",
+    "icon": "./assets/img/icon.png",
+    "description": "A soundboard for It's Always Sunny in Philadelphia.",
+    "version": "1.0.1",
+    "orientation": "portrait",
+    "ios": {
+    	"bundleIdentifier": "com.jackpan.alwayssunnysoundboard"
+    },
+    "android": {
+    	"package": "com.jackpan.alwayssunnysoundboard",
+    	"versionCode": 2,
+    	"permissions": [
+    		"WRITE_EXTERNAL_STORAGE",
+			"READ_EXTERNAL_STORAGE",
+			"MANAGE_DOCUMENTS",
+			"com.anddoes.launcher.permission.UPDATE_COUNT",
+			"com.android.launcher.permission.INSTALL_SHORTCUT",
+			"com.google.android.c2dm.permission.RECEIVE",
+			"com.google.android.gms.permission.ACTIVITY_RECOGNITION",
+			"com.google.android.providers.gsf.permission.READ_GSERVICES",
+			"com.htc.launcher.permission.READ_SETTINGS",
+			"com.htc.launcher.permission.UPDATE_SHORTCUT",
+			"com.majeur.launcher.permission.UPDATE_BADGE",
+			"com.sec.android.provider.badge.permission.READ",
+			"com.sec.android.provider.badge.permission.WRITE",
+			"com.sonyericsson.home.permission.BROADCAST_BADGE"
+    	]
+    },
   }
 }

@@ -12,6 +12,7 @@ export default class Board extends React.Component {
                        {quote: "I won't change my mind cause I'm an American.", char:["mac"], key:"american"},
                        {quote: "I won't change my mind regardless of the facts.", char:["mac"], key:"facts"},
                        {quote: "I'm eating because I'm very uncomfortable.", char:["dennis"], key:"eating"},
+                       {quote: "That, I love. I absolutely love!.", char:["frank"], key:"love"},
                        {quote: "Later dudes. S U in your As.", char:["charlie"], key:"later"},
                        {quote: "Bullshit.", char:["frank"], key:"bullshit"},
                        {quote: "Derivative.", char:["frank"], key:"derivative"},
@@ -20,9 +21,12 @@ export default class Board extends React.Component {
                        {quote: "What is your spaghetti policy here?", char:["charlie"], key:"spaghetti"},
                        {quote: "Jesus, Frank!", char:["frank"], key:"jesus"},
                        {quote: "Euueauuuuueaaaaaaauuughhhꭜꭜꭜꭜꭜꭜꭜꭜꭜ", char:["mac"], key:"fatmac"},
-                       {quote: "Call me that from now on. Mantis.", char:["frank"], key:"mantis"},
+                       {quote: "Call me that from now on: Mantis.", char:["frank"], key:"mantis"},
+                       {quote: "WHY YOU LOOK SO STUPID?", char:["dee"], key:"stupid"},
+                       {quote: "I'm sorry, IM JUST PLAYING!", char:["dee"], key:"playing"},
                        {quote: "Ready boys and girls? Cause here's when it gets good.", char:["charlie"], key:"ready"},
                        {quote: "Science is a liar sometimes!", char:["mac"], key:"science"},
+                       {quote: "For the Sherlock Holmes look.", char:["charlie"], key:"holmes"},
                        {quote: "Tell me I'm good.", char:["dee"], key:"good"},
                        {quote: "I'm just the best goddamn bird lawyer in the world.", char:["charlie"], key:"bird"},
                        {quote: "Because of the implication.", char:["dennis"], key:"implication"},
@@ -99,6 +103,15 @@ export default class Board extends React.Component {
         case "good":
           await this.playbackInstance.loadAsync(require('../assets/sound/im_good.mp3'));
           break;
+        case "stupid":
+          await this.playbackInstance.loadAsync(require('../assets/sound/stupid.mp3'));
+          break;
+        case "playing":
+          await this.playbackInstance.loadAsync(require('../assets/sound/playing.mp3'));
+          break;
+        case "holmes":
+          await this.playbackInstance.loadAsync(require('../assets/sound/sherlock_holmes.mp3'));
+          break;
         case "later":
           await this.playbackInstance.loadAsync(require('../assets/sound/later_dudes.mp3'));
           break;
@@ -107,6 +120,9 @@ export default class Board extends React.Component {
           break;
         case "god":
           await this.playbackInstance.loadAsync(require('../assets/sound/god.mp3'));
+          break;
+        case "love":
+          await this.playbackInstance.loadAsync(require('../assets/sound/that_i_love.mp3'));
           break;
         case "facts":
           await this.playbackInstance.loadAsync(require('../assets/sound/regardless_of_facts.mp3'));
