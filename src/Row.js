@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     flex: 0,
     flexDirection: 'row',
     width: '100%',
-    height: 50,
+    height: 58,
     justifyContent: 'flex-start',
     alignItems: 'center',
     paddingTop: 5,
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: '#fff',
-    fontSize: 16,
+    fontSize: 17,
     fontFamily: 'raspoutine-classic',
   },
   divider: {

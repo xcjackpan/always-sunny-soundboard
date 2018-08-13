@@ -210,7 +210,7 @@ const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
     justifyContent: 'space-around',
-    backgroundColor: '#02040F',
+    backgroundColor: '#111',
   },
   divider: {
     borderTopWidth: 1,

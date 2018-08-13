@@ -1,6 +1,6 @@
 {
   "expo": {
-  	"name": "always-sunny-soundboard",
+  	"name": "Always Sunny Soundboard",
     "sdkVersion": "27.0.0",
     "icon": "./assets/img/icon.png",
     "description": "A soundboard for It's Always Sunny in Philadelphia.",
@@ -10,8 +10,12 @@
     	"bundleIdentifier": "com.jackpan.alwayssunnysoundboard"
     },
     "android": {
+    	"adaptiveIcon": {
+    		"foregroundImage": "./assets/img/rumham.png",
+    		"backgroundColor": "#171717",
+    	},
     	"package": "com.jackpan.alwayssunnysoundboard",
-    	"versionCode": 2,
+    	"versionCode": 4,
     	"permissions": [
     		"WRITE_EXTERNAL_STORAGE",
 			"READ_EXTERNAL_STORAGE",
