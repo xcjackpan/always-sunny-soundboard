@@ -6,21 +6,28 @@ export default class Board extends React.Component {
   constructor(props) {
     super(props);
     this.playbackInstance = null;
+    // In case I want to do multi-character quotes later, keep char as an array
     this.soundclips = [{quote: "Wildcard!", char:["charlie"], key:"wildcard"},
                        {quote: "You must excuse me, I've grown quite weary.", char:["charlie"], key:"weary"},
                        {quote: "I'm the trash man!", char:["frank"], key:"trash"},
                        {quote: "I won't change my mind cause I'm an American.", char:["mac"], key:"american"},
                        {quote: "I won't change my mind regardless of the facts.", char:["mac"], key:"facts"},
                        {quote: "I'm eating because I'm very uncomfortable.", char:["dennis"], key:"eating"},
+                       {quote: "AHHHH! RUMHAM!", char:["frank"], key:"rumham"},
                        {quote: "That, I love. I absolutely love!.", char:["frank"], key:"love"},
                        {quote: "Later dudes. S U in your As.", char:["charlie"], key:"later"},
+                       {quote: "I got milk all over me!", char:["dee"], key:"milk"},
                        {quote: "Bullshit.", char:["frank"], key:"bullshit"},
                        {quote: "Derivative.", char:["frank"], key:"derivative"},
-                       {quote: "AHHHH! RUMHAM!", char:["frank"], key:"rumham"},
+                       {quote: "Where's our bible?", char:["mac"], key:"bible"},
                        {quote: "Aw sheiiiiiiiiiit.", char:["frank"], key:"sheit"},
                        {quote: "What is your spaghetti policy here?", char:["charlie"], key:"spaghetti"},
                        {quote: "Jesus, Frank!", char:["frank"], key:"jesus"},
                        {quote: "Euueauuuuueaaaaaaauuughhhꭜꭜꭜꭜꭜꭜꭜꭜꭜ", char:["mac"], key:"fatmac"},
+                       {quote: "I have contained my rage for as long as possible.", char:["dennis"], key:"waves"},
+                       {quote: "Begone, vile man! Begone from me!", char:["dennis"], key:"begone"},
+                       {quote: "THE GOLDEN GOD!", char:["dennis"], key:"golden"},
+                       {quote: "I am untethered and my rage knows no bounds!", char:["dennis"], key:"untethered"},
                        {quote: "Call me that from now on: Mantis.", char:["frank"], key:"mantis"},
                        {quote: "WHY YOU LOOK SO STUPID?", char:["dee"], key:"stupid"},
                        {quote: "I'm sorry, IM JUST PLAYING!", char:["dee"], key:"playing"},
@@ -88,8 +95,20 @@ export default class Board extends React.Component {
         case "wildcard":
           await this.playbackInstance.loadAsync(require('../assets/sound/wildcard_bitches.mp3'));
           break;
+        case "golden":
+          await this.playbackInstance.loadAsync(require('../assets/sound/golden_god.mp3'));
+          break;
         case "ready":
           await this.playbackInstance.loadAsync(require('../assets/sound/gets_good.mp3'));
+          break;
+        case "waves":
+          await this.playbackInstance.loadAsync(require('../assets/sound/thousand_waves.mp3'));
+          break;
+        case "begone":
+          await this.playbackInstance.loadAsync(require('../assets/sound/begone.mp3'));
+          break;
+        case "untethered":
+          await this.playbackInstance.loadAsync(require('../assets/sound/untethered.mp3'));
           break;
         case "bird":
           await this.playbackInstance.loadAsync(require('../assets/sound/bird_lawyer.mp3'));
@@ -105,6 +124,9 @@ export default class Board extends React.Component {
           break;
         case "stupid":
           await this.playbackInstance.loadAsync(require('../assets/sound/stupid.mp3'));
+          break;
+        case "bible":
+          await this.playbackInstance.loadAsync(require('../assets/sound/bible.mp3'));
           break;
         case "playing":
           await this.playbackInstance.loadAsync(require('../assets/sound/playing.mp3'));
@@ -144,6 +166,9 @@ export default class Board extends React.Component {
           break;
         case "mantis":
           await this.playbackInstance.loadAsync(require('../assets/sound/mantis.mp3'));
+          break;
+        case "milk":
+          await this.playbackInstance.loadAsync(require('../assets/sound/milk.mp3'));
           break;
         case "trash":
           await this.playbackInstance.loadAsync(require('../assets/sound/the_trash_man.mp3'));

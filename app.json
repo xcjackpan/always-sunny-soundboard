@@ -10,12 +10,8 @@
     	"bundleIdentifier": "com.jackpan.alwayssunnysoundboard"
     },
     "android": {
-    	"adaptiveIcon": {
-    		"foregroundImage": "./assets/img/rumham.png",
-    		"backgroundColor": "#171717",
-    	},
     	"package": "com.jackpan.alwayssunnysoundboard",
-    	"versionCode": 4,
+    	"versionCode": 6,
     	"permissions": [
     		"WRITE_EXTERNAL_STORAGE",
 			"READ_EXTERNAL_STORAGE",
