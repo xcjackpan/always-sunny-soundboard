@@ -14,15 +14,18 @@ export default class Board extends React.Component {
                        {quote: "I won't change my mind regardless of the facts.", char:["mac"], key:"facts"},
                        {quote: "I'm eating because I'm very uncomfortable.", char:["dennis"], key:"eating"},
                        {quote: "AHHHH! RUMHAM!", char:["frank"], key:"rumham"},
-                       {quote: "That, I love. I absolutely love!.", char:["frank"], key:"love"},
+                       {quote: "That, I love. I absolutely love!", char:["frank"], key:"love"},
                        {quote: "Later dudes. S U in your As.", char:["charlie"], key:"later"},
                        {quote: "I got milk all over me!", char:["dee"], key:"milk"},
                        {quote: "Bullshit.", char:["frank"], key:"bullshit"},
                        {quote: "Derivative.", char:["frank"], key:"derivative"},
                        {quote: "Where's our bible?", char:["mac"], key:"bible"},
+                       {quote: "Cat in the wall, eh? Now you're talking my language.", char:["charlie"], key:"language"},
                        {quote: "Aw sheiiiiiiiiiit.", char:["frank"], key:"sheit"},
                        {quote: "What is your spaghetti policy here?", char:["charlie"], key:"spaghetti"},
+                       {quote: "Reason will prevail!", char:["charlie", "mac"], key:"reason"},
                        {quote: "Jesus, Frank!", char:["frank"], key:"jesus"},
+                       {quote: "I don't think there's anything in the laws of nature that would support that.", char:["dee"], key:"nature"},
                        {quote: "Euueauuuuueaaaaaaauuughhhꭜꭜꭜꭜꭜꭜꭜꭜꭜ", char:["mac"], key:"fatmac"},
                        {quote: "I have contained my rage for as long as possible.", char:["dennis"], key:"waves"},
                        {quote: "Begone, vile man! Begone from me!", char:["dennis"], key:"begone"},
@@ -34,17 +37,21 @@ export default class Board extends React.Component {
                        {quote: "Ready boys and girls? Cause here's when it gets good.", char:["charlie"], key:"ready"},
                        {quote: "Science is a liar sometimes!", char:["mac"], key:"science"},
                        {quote: "For the Sherlock Holmes look.", char:["charlie"], key:"holmes"},
+                       {quote: "LOOK AT ME WHEN YOURE TALKING TO ME!", char:["dennis"], key:"look"},
+                       {quote: "Did you bang my wife?", char:["frank"], key:"wife"},
                        {quote: "Tell me I'm good.", char:["dee"], key:"good"},
                        {quote: "I'm just the best goddamn bird lawyer in the world.", char:["charlie"], key:"bird"},
                        {quote: "Because of the implication.", char:["dennis"], key:"implication"},
                        {quote: "Goddammit.", char:["dee"], key:"goddammit"},
                        {quote: "Through God all things are possible.", char:["mac"], key:"god"},
+                       {quote: "Newsflash!", char:["dennis"], key:"newsflash"},
                        {quote: "I eat stickers all the time, dude!", char:["charlie"], key:"stickers"},
                        {quote: "You don't really know what hot is, do ya?", char:["dennis"], key:"hot"},
                        {quote: "I'm a Swedish plumber, I'm here to fix your pipes.", char:["mac"], key:"plumber"},
                        {quote: "My roommate was a frog kid.", char:["frank"], key:"frog"},
                        {quote: "So much more romantic in the middle of nowhere.", char:["mac"], key:"decisions"},
                        {quote: "TOOLS! I HAVE TO HAVE MY TOOLS!", char:["dennis"], key:"tools"},
+                       {quote: "Oh whoops! I've dropped my...", char:["frank"], key:"magnum"},
                        {quote: "A leather shop? In Arizona?", char:["dee"], key:"leather"}];
   }
 
@@ -95,11 +102,20 @@ export default class Board extends React.Component {
         case "wildcard":
           await this.playbackInstance.loadAsync(require('../assets/sound/wildcard_bitches.mp3'));
           break;
+        case "look":
+          await this.playbackInstance.loadAsync(require('../assets/sound/look.mp3'));
+          break;
         case "golden":
           await this.playbackInstance.loadAsync(require('../assets/sound/golden_god.mp3'));
           break;
+        case "magnum":
+          await this.playbackInstance.loadAsync(require('../assets/sound/magnum_dong.mp3'));
+          break;
         case "ready":
           await this.playbackInstance.loadAsync(require('../assets/sound/gets_good.mp3'));
+          break;
+        case "newsflash":
+          await this.playbackInstance.loadAsync(require('../assets/sound/newsflash.mp3'));
           break;
         case "waves":
           await this.playbackInstance.loadAsync(require('../assets/sound/thousand_waves.mp3'));
@@ -161,6 +177,9 @@ export default class Board extends React.Component {
         case "decisions":
           await this.playbackInstance.loadAsync(require('../assets/sound/rash_decisions.mp3'));
           break;
+        case "reason":
+          await this.playbackInstance.loadAsync(require('../assets/sound/reason.mp3'));
+          break;
         case "american":
           await this.playbackInstance.loadAsync(require('../assets/sound/change_my_mind.mp3'));
           break;
@@ -169,6 +188,12 @@ export default class Board extends React.Component {
           break;
         case "milk":
           await this.playbackInstance.loadAsync(require('../assets/sound/milk.mp3'));
+          break;
+        case "nature":
+          await this.playbackInstance.loadAsync(require('../assets/sound/nature.mp3'));
+          break;
+        case "language":
+          await this.playbackInstance.loadAsync(require('../assets/sound/language.mp3'));
           break;
         case "trash":
           await this.playbackInstance.loadAsync(require('../assets/sound/the_trash_man.mp3'));
@@ -205,6 +230,9 @@ export default class Board extends React.Component {
           break;
         case "spaghetti":
           await this.playbackInstance.loadAsync(require('../assets/sound/spaghetti_policy.mp3'));
+          break;
+        case "wife":
+          await this.playbackInstance.loadAsync(require('../assets/sound/did_you_bang_my_wife.mp3'));
           break;
         case "fatmac":
           await this.playbackInstance.loadAsync(require('../assets/sound/augh.mp3'));

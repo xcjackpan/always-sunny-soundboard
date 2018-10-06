@@ -1,7 +1,7 @@
 import React from 'react';
 import Row from './src/Row.js';
 import Board from './src/Board.js';
-import { StyleSheet, Text, ScrollView, View, Image, TouchableWithoutFeedback, Alert } from 'react-native';
+import { StyleSheet, Text, ScrollView, View, Image, TouchableWithoutFeedback, Alert, Button, Linking } from 'react-native';
 import { Font } from 'expo';
 
 export default class App extends React.Component {
@@ -108,6 +108,9 @@ export default class App extends React.Component {
           </View>
         </View>
         <Board filter={this.state.filter}/>
+        <View style={styles.privacy}>
+          <Button title="View Privacy Policy" color="#111111" onPress={ ()=>{ Linking.openURL('http://xcjackpan.me/dist/alwayssunnyprivacy.html')}} />
+        </View>
       </ScrollView>
     );
   }
@@ -146,5 +149,12 @@ const styles = StyleSheet.create({
   faces: {
     height: 70,
     width: 70,
+  },
+  privacy: {
+    flexDirection: 'row',
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 50,
   }
 });

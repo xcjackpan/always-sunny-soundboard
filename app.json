@@ -11,7 +11,7 @@
     },
     "android": {
     	"package": "com.jackpan.alwayssunnysoundboard",
-    	"versionCode": 6,
+    	"versionCode": 8,
     	"permissions": [
     		"WRITE_EXTERNAL_STORAGE",
 			"READ_EXTERNAL_STORAGE",
